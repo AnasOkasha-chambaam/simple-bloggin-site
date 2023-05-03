@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect requests to the public directory
+RewriteRule ^$ public/ [L]
+RewriteRule (.*) public/$1 [L]
+
+# Redirect all requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [QSA,L]
