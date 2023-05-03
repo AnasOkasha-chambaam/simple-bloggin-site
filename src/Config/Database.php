@@ -1,5 +1,5 @@
 <?php
-namespace Project\Config;
+namespace App\Config;
 
 use PDO;
 use PDOException;
@@ -24,3 +24,4 @@ class Database {
     return $this->conn;
   }
 }
+?>
